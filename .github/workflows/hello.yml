@@ -7,3 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello, world!"
+
+  build:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Building..."
+        
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - run: echo "Testing..."
